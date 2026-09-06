@@ -1,0 +1,114 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi", "hello", "hey", "good morning", "good afternoon",
+        "is anyone there", "hey there", "hello bot", "greetings", "what's up"
+      ],
+      "responses": [
+        "Hello! I'm the campus helpdesk bot. How can I help you today?",
+        "Hi there! Ask me about admissions, library, exams, fees, or hostel."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye", "goodbye", "see you later", "talk to you later",
+        "gotta go", "that's all thanks", "quit", "exit"
+      ],
+      "responses": [
+        "Goodbye! Feel free to come back if you have more questions.",
+        "See you later! Good luck with everything."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks", "thank you", "that's helpful", "thanks a lot",
+        "appreciate it", "thank you so much", "great, thanks"
+      ],
+      "responses": [
+        "You're welcome!", "Happy to help!", "Anytime!"
+      ]
+    },
+    {
+      "tag": "admissions",
+      "patterns": [
+        "how do i apply for admission", "what is the admission process",
+        "when does admission start", "admission deadline",
+        "how can i get admission into this college", "eligibility for admission",
+        "documents required for admission", "admission form"
+      ],
+      "responses": [
+        "Admissions open in June every year. You'll need your 12th marksheet, ID proof, and entrance exam score. Apply via the official admissions portal."
+      ]
+    },
+    {
+      "tag": "library_hours",
+      "patterns": [
+        "what time does the library open", "library timings",
+        "when does the library close", "is the library open on sunday",
+        "library hours", "can i visit the library at night"
+      ],
+      "responses": [
+        "The library is open Monday to Saturday, 8 AM to 9 PM. It's closed on Sundays and public holidays."
+      ]
+    },
+    {
+      "tag": "exam_schedule",
+      "patterns": [
+        "when are the exams", "exam schedule", "exam timetable",
+        "when does the semester exam start", "date sheet for exams",
+        "when will results be declared", "exam dates"
+      ],
+      "responses": [
+        "End-semester exams usually start in the last week of November and April. The exact timetable is published on the college website a month in advance."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "what is the semester fee", "how much is the tuition fee",
+        "when is the fee due", "fee payment deadline",
+        "how do i pay my fees", "late fee penalty", "fee structure"
+      ],
+      "responses": [
+        "Semester fees are due within the first two weeks of each semester and can be paid online through the student portal. A late fee applies after the deadline."
+      ]
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "how do i apply for hostel", "hostel fees", "is hostel available for first years",
+        "hostel rules", "hostel timings", "curfew time in hostel",
+        "how to get a hostel room"
+      ],
+      "responses": [
+        "Hostel applications open after admission confirmation. Rooms are allotted on a first-come basis, and the curfew is 10 PM on weekdays."
+      ]
+    },
+    {
+      "tag": "placement",
+      "patterns": [
+        "which companies visit for placement", "placement statistics",
+        "average package", "when do placements start",
+        "how is the placement cell", "internship opportunities"
+      ],
+      "responses": [
+        "The placement cell organizes drives starting in the 7th semester. Past recruiters include a mix of product, service, and core companies across various packages."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "how do i contact the college", "college phone number",
+        "college email address", "where is the admin office",
+        "who do i talk to for a complaint"
+      ],
+      "responses": [
+        "You can reach the college office at info@college.edu or visit the admin block between 9 AM and 5 PM on working days."
+      ]
+    }
+  ]
+}
