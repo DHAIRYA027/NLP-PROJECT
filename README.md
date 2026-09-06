@@ -23,7 +23,7 @@ intent classification (TF-IDF + Multinomial Naive Bayes) -- src/intent_classifie
 
 Orchestration lives in `src/chatbot.py`; `app.py` is a Streamlit chat UI on top of it.
 
-## NLP concepts this covers (useful for your report)
+## NLP concepts this covers
 
 - **Tokenization, stopword removal, lemmatization** (`preprocess.py`)
 - **Bag-of-Words / TF-IDF** vectorization (`intent_classifier.py`)
