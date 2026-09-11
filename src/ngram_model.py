@@ -30,18 +30,41 @@ def load_sentences(path: Path = CORPUS_PATH) -> list[list[str]]:
     return tokenized
 
 
-class NgramLanguageModel:
-    """Markov-assumption n-gram model with add-k (Laplace) smoothing."""
+DEFAULT_INTERPOLATION_WEIGHTS = {
+    1: (1.0,),
+    2: (0.25, 0.75),
+    3: (0.1, 0.3, 0.6),
+}
 
-    def __init__(self, n: int = 3, add_k: float = 1.0):
+
+class NgramLanguageModel:
+    """Markov-assumption n-gram model, with either add-k (Laplace) smoothing
+    or linear interpolation across orders 1..n as the smoothing strategy."""
+
+    def __init__(
+        self,
+        n: int = 3,
+        add_k: float = 1.0,
+        smoothing: str = "add_k",
+        interpolation_weights: tuple[float, ...] | None = None,
+    ):
+        if smoothing not in {"add_k", "interpolation"}:
+            raise ValueError("smoothing must be 'add_k' or 'interpolation'")
         self.n = n
         self.add_k = add_k
+        self.smoothing = smoothing
+        self.interpolation_weights = (
+            interpolation_weights or DEFAULT_INTERPOLATION_WEIGHTS.get(n, tuple([1 / n] * n))
+        )
         self.ngram_counts: Counter = Counter()
         self.context_counts: Counter = Counter()
+        self.order_counts: dict[int, Counter] = {k: Counter() for k in range(1, n + 1)}
+        self.order_context_counts: dict[int, Counter] = {k: Counter() for k in range(1, n + 1)}
         self.vocab: set[str] = set()
 
-    def _pad(self, sentence: list[str]) -> list[str]:
-        return [START] * (self.n - 1) + sentence + [END]
+    def _pad(self, sentence: list[str], order: int | None = None) -> list[str]:
+        order = order or self.n
+        return [START] * (order - 1) + sentence + [END]
 
     def fit(self, sentences: list[list[str]]) -> "NgramLanguageModel":
         for sentence in sentences:
@@ -56,11 +79,41 @@ class NgramLanguageModel:
                 word = padded[i]
                 self.ngram_counts[context + (word,)] += 1
                 self.context_counts[context] += 1
+
+        if self.smoothing == "interpolation":
+            for order in range(1, self.n + 1):
+                for sentence in sentences:
+                    padded = self._pad(sentence, order=order)
+                    for i in range(order - 1, len(padded)):
+                        context = tuple(padded[i - order + 1:i])
+                        word = padded[i]
+                        self.order_counts[order][context + (word,)] += 1
+                        self.order_context_counts[order][context] += 1
         return self
+
+    def _mle_prob(self, order: int, word: str, context: tuple[str, ...]) -> float:
+        context = context[-(order - 1):] if order > 1 else ()
+        v = len(self.vocab)
+        num = self.order_counts[order].get(context + (word,), 0)
+        den = self.order_context_counts[order].get(context, 0)
+        if order == 1:
+            return (num + 1) / (den + v)
+        if den == 0:
+            return 1.0 / v
+        return num / den
+
+    def _interpolated_prob(self, word: str, context: tuple[str, ...]) -> float:
+        context = context[-(self.n - 1):] if self.n > 1 else ()
+        return sum(
+            weight * self._mle_prob(order, word, context[-(order - 1):] if order > 1 else ())
+            for order, weight in zip(range(1, self.n + 1), self.interpolation_weights)
+        )
 
     def prob(self, word: str, context: tuple[str, ...]) -> float:
         if word not in self.vocab:
             word = UNK
+        if self.smoothing == "interpolation":
+            return self._interpolated_prob(word, context)
         context = context[-(self.n - 1):] if self.n > 1 else ()
         v = len(self.vocab)
         num = self.ngram_counts.get(context + (word,), 0) + self.add_k
@@ -106,10 +159,15 @@ if __name__ == "__main__":
     sentences = load_sentences()
     split = int(len(sentences) * 0.85)
     train_sents, test_sents = sentences[:split], sentences[split:]
-
-    lm = NgramLanguageModel(n=3, add_k=1.0).fit(train_sents)
     print(f"Trained on {len(train_sents)} sentences, tested on {len(test_sents)}")
-    print(f"Perplexity on held-out data: {lm.perplexity(test_sents):.2f}")
+
+    for n in (1, 2, 3):
+        for smoothing in ("add_k", "interpolation"):
+            lm = NgramLanguageModel(n=n, add_k=1.0, smoothing=smoothing).fit(train_sents)
+            pp = lm.perplexity(test_sents)
+            print(f"n={n} smoothing={smoothing:13} perplexity={pp:.2f}")
+
     print()
+    lm = NgramLanguageModel(n=3, add_k=1.0, smoothing="interpolation").fit(train_sents)
     for seed in [["the", "library"], ["students", "can"], ["the", "college"]]:
         print(f"seed={seed!r:30} -> {lm.generate(seed=seed, max_length=15)}")

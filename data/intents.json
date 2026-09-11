@@ -3,19 +3,21 @@
     {
       "tag": "greeting",
       "patterns": [
-        "hi", "hello", "hey", "good morning", "good afternoon",
-        "is anyone there", "hey there", "hello bot", "greetings", "what's up"
+        "hi", "hello", "hey", "good morning", "good afternoon", "good evening",
+        "is anyone there", "hey there", "hello bot", "greetings", "what's up",
+        "yo", "hiya", "hey bot", "anyone here", "howdy", "hi there", "good day"
       ],
       "responses": [
         "Hello! I'm the campus helpdesk bot. How can I help you today?",
-        "Hi there! Ask me about admissions, library, exams, fees, or hostel."
+        "Hi there! Ask me about admissions, library, exams, fees, hostel, or placements."
       ]
     },
     {
       "tag": "goodbye",
       "patterns": [
-        "bye", "goodbye", "see you later", "talk to you later",
-        "gotta go", "that's all thanks", "quit", "exit"
+        "bye", "goodbye", "see you later", "talk to you later", "gotta go",
+        "that's all thanks", "quit", "exit", "see ya", "i'm done", "close chat",
+        "bye bye", "catch you later", "i have to go now", "end conversation"
       ],
       "responses": [
         "Goodbye! Feel free to come back if you have more questions.",
@@ -25,11 +27,14 @@
     {
       "tag": "thanks",
       "patterns": [
-        "thanks", "thank you", "that's helpful", "thanks a lot",
-        "appreciate it", "thank you so much", "great, thanks"
+        "thanks", "thank you", "that's helpful", "thanks a lot", "appreciate it",
+        "thank you so much", "great, thanks", "cool thanks", "thanks for the info",
+        "that helped", "much appreciated", "thanks buddy", "perfect thank you"
       ],
       "responses": [
-        "You're welcome!", "Happy to help!", "Anytime!"
+        "You're welcome!",
+        "Happy to help!",
+        "Anytime!"
       ]
     },
     {
@@ -38,7 +43,11 @@
         "how do i apply for admission", "what is the admission process",
         "when does admission start", "admission deadline",
         "how can i get admission into this college", "eligibility for admission",
-        "documents required for admission", "admission form"
+        "documents required for admission", "admission form",
+        "is there an entrance exam for admission", "admission counselling dates",
+        "can i get direct admission", "admission fee amount",
+        "what percentage do i need for admission", "lateral entry admission process",
+        "admission helpline number", "is management quota available"
       ],
       "responses": [
         "Admissions open in June every year. You'll need your 12th marksheet, ID proof, and entrance exam score. Apply via the official admissions portal."
@@ -49,10 +58,13 @@
       "patterns": [
         "what time does the library open", "library timings",
         "when does the library close", "is the library open on sunday",
-        "library hours", "can i visit the library at night"
+        "library hours", "can i visit the library at night",
+        "is the library open on public holidays", "24 hour library access",
+        "how late is the library open during exams", "library working hours today",
+        "is the reading room open now"
       ],
       "responses": [
-        "The library is open Monday to Saturday, 8 AM to 9 PM. It's closed on Sundays and public holidays."
+        "The library is open Monday to Saturday, 8 AM to 9 PM. It's closed on Sundays and public holidays. During exam weeks it stays open until midnight."
       ]
     },
     {
@@ -60,7 +72,10 @@
       "patterns": [
         "when are the exams", "exam schedule", "exam timetable",
         "when does the semester exam start", "date sheet for exams",
-        "when will results be declared", "exam dates"
+        "when will results be declared", "exam dates",
+        "when is the mid semester exam", "supplementary exam dates",
+        "how do i download my admit card", "exam seating arrangement",
+        "when do backlog exams happen"
       ],
       "responses": [
         "End-semester exams usually start in the last week of November and April. The exact timetable is published on the college website a month in advance."
@@ -70,8 +85,10 @@
       "tag": "fees",
       "patterns": [
         "what is the semester fee", "how much is the tuition fee",
-        "when is the fee due", "fee payment deadline",
-        "how do i pay my fees", "late fee penalty", "fee structure"
+        "when is the fee due", "fee payment deadline", "how do i pay my fees",
+        "late fee penalty", "fee structure", "can i pay fees in installments",
+        "fee refund policy", "how to get a fee receipt", "is there a fine for late payment",
+        "online fee payment portal", "hostel fee vs tuition fee difference"
       ],
       "responses": [
         "Semester fees are due within the first two weeks of each semester and can be paid online through the student portal. A late fee applies after the deadline."
@@ -80,9 +97,12 @@
     {
       "tag": "hostel",
       "patterns": [
-        "how do i apply for hostel", "hostel fees", "is hostel available for first years",
-        "hostel rules", "hostel timings", "curfew time in hostel",
-        "how to get a hostel room"
+        "how do i apply for hostel", "hostel fees",
+        "is hostel available for first years", "hostel rules", "hostel timings",
+        "curfew time in hostel", "how to get a hostel room",
+        "can i change my hostel room", "is there wifi in the hostel",
+        "hostel mess menu", "guest policy in hostel", "hostel allotment process",
+        "is ac room available in hostel"
       ],
       "responses": [
         "Hostel applications open after admission confirmation. Rooms are allotted on a first-come basis, and the curfew is 10 PM on weekdays."
@@ -92,8 +112,11 @@
       "tag": "placement",
       "patterns": [
         "which companies visit for placement", "placement statistics",
-        "average package", "when do placements start",
-        "how is the placement cell", "internship opportunities"
+        "average package", "when do placements start", "how is the placement cell",
+        "internship opportunities", "highest package offered",
+        "placement eligibility criteria", "how many students got placed last year",
+        "do core companies visit for placement", "pre placement offer process",
+        "placement training and soft skills sessions"
       ],
       "responses": [
         "The placement cell organizes drives starting in the 7th semester. Past recruiters include a mix of product, service, and core companies across various packages."
@@ -104,10 +127,66 @@
       "patterns": [
         "how do i contact the college", "college phone number",
         "college email address", "where is the admin office",
-        "who do i talk to for a complaint"
+        "who do i talk to for a complaint", "how to reach the dean",
+        "hod contact details", "college address",
+        "who is the point of contact for international students",
+        "emergency contact number for college"
       ],
       "responses": [
         "You can reach the college office at info@college.edu or visit the admin block between 9 AM and 5 PM on working days."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "am i eligible for a scholarship", "how do i apply for a scholarship",
+        "scholarship application deadline", "merit scholarship criteria",
+        "is there a scholarship for sc st students", "need based financial aid",
+        "how much scholarship amount can i get", "documents needed for scholarship",
+        "sports quota scholarship", "government scholarship portal for students",
+        "renewal process for scholarship"
+      ],
+      "responses": [
+        "Merit and need-based scholarships are announced at the start of each academic year. Applications go through the National Scholarship Portal or the college's own financial aid office, depending on the scheme."
+      ]
+    },
+    {
+      "tag": "transport",
+      "patterns": [
+        "is there a college bus service", "bus route timings",
+        "how much does the bus pass cost", "which areas does the college bus cover",
+        "how do i apply for a bus pass", "is transport available on sundays",
+        "college shuttle schedule", "parking facility for students",
+        "is there a bus from the railway station", "bus pass renewal process"
+      ],
+      "responses": [
+        "College buses run on fixed routes covering major parts of the city, with morning and evening trips on working days. Bus passes are issued at the transport office at the start of each semester."
+      ]
+    },
+    {
+      "tag": "wifi_it_support",
+      "patterns": [
+        "wifi is not working in my hostel", "how do i connect to campus wifi",
+        "wifi password for students", "internet is very slow on campus",
+        "how do i reset my student portal password", "laptop not connecting to network",
+        "who do i contact for it support", "email account is not working",
+        "how to register a new device on campus wifi", "printer not working in lab"
+      ],
+      "responses": [
+        "For wifi or portal issues, raise a ticket with the IT helpdesk at ithelp@college.edu or visit the IT support desk in the main block. Most login issues are resolved within a day."
+      ]
+    },
+    {
+      "tag": "complaint",
+      "patterns": [
+        "i want to file a complaint", "how do i report ragging",
+        "who handles student complaints", "there's an issue with my hostel room",
+        "i want to report harassment", "how to escalate an unresolved issue",
+        "grievance redressal process", "where can i submit feedback about a professor",
+        "anti ragging committee contact", "how to raise an anonymous complaint"
+      ],
+      "responses": [
+        "You can file a complaint through the student grievance portal, or contact the grievance redressal cell directly for sensitive matters like ragging or harassment, which are handled confidentially and on priority."
       ]
     }
   ]

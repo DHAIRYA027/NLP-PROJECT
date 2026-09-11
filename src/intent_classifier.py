@@ -5,13 +5,31 @@ from pathlib import Path
 
 import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
+from sklearn.svm import LinearSVC
+from sklearn.calibration import CalibratedClassifierCV
 
 from src.preprocess import preprocess_to_string
 
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "intents.json"
 MODEL_PATH = Path(__file__).resolve().parent.parent / "data" / "intent_model.joblib"
+
+AVAILABLE_MODELS = {
+    "naive_bayes": lambda: MultinomialNB(),
+    "logistic_regression": lambda: LogisticRegression(max_iter=1000),
+    "linear_svm": lambda: CalibratedClassifierCV(LinearSVC(), cv=3),
+}
+
+
+def build_pipeline(model_name: str = "naive_bayes") -> Pipeline:
+    if model_name not in AVAILABLE_MODELS:
+        raise ValueError(f"Unknown model '{model_name}'. Choose from {list(AVAILABLE_MODELS)}")
+    return Pipeline([
+        ("tfidf", TfidfVectorizer()),
+        ("clf", AVAILABLE_MODELS[model_name]()),
+    ])
 
 
 def load_intents(path: Path = DATA_PATH) -> dict:
@@ -29,11 +47,9 @@ def build_training_data(intents: dict) -> tuple[list[str], list[str]]:
 
 
 class IntentClassifier:
-    def __init__(self):
-        self.pipeline = Pipeline([
-            ("tfidf", TfidfVectorizer()),
-            ("nb", MultinomialNB()),
-        ])
+    def __init__(self, model_name: str = "naive_bayes"):
+        self.model_name = model_name
+        self.pipeline = build_pipeline(model_name)
         self.responses: dict[str, list[str]] = {}
 
     def train(self, intents: dict | None = None):
@@ -55,12 +71,15 @@ class IntentClassifier:
         return random.choice(self.responses[tag])
 
     def save(self, path: Path = MODEL_PATH):
-        joblib.dump({"pipeline": self.pipeline, "responses": self.responses}, path)
+        joblib.dump(
+            {"pipeline": self.pipeline, "responses": self.responses, "model_name": self.model_name},
+            path,
+        )
 
     @classmethod
     def load(cls, path: Path = MODEL_PATH) -> "IntentClassifier":
         data = joblib.load(path)
-        clf = cls()
+        clf = cls(model_name=data.get("model_name", "naive_bayes"))
         clf.pipeline = data["pipeline"]
         clf.responses = data["responses"]
         return clf
