@@ -128,27 +128,3 @@ NLP-PROJECT/
 └── requirements.txt / requirements-dev.txt
 ```
 
-## Deploying (for the live demo link)
-
-1. Push this repo to GitHub (already done).
-2. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub.
-3. "New app" → pick this repo, branch `main`, main file path `app.py`.
-4. Deploy. Copy the resulting URL into the "Live demo" link at the top of this README.
-
-## Extending it further
-
-- Try **Kneser-Ney** smoothing and compare against the interpolation results in `REPORT.md`.
-- Add more intents/patterns, especially more varied `goodbye` and `wifi_it_support`
-  examples — `REPORT.md` shows exactly why those two are the weakest classes.
-- Swap TF-IDF for word embeddings (e.g. spaCy vectors) to address the lexical-overlap
-  failure mode described in the error analysis.
-- Add a simple **spell-correction** step before classification (edit distance) as
-  another classical-NLP component.
-
-## Notes
-
-- The dataset is hand-written and still small by NLP standards — `REPORT.md` is
-  explicit about what that does and doesn't tell you.
-- The n-gram model's generated fallback text is intentionally rough — it's meant to
-  demonstrate statistical language modeling, not to be fluent. That's the honest
-  tradeoff of not using a pretrained model, and `REPORT.md` says so directly.
