@@ -2,6 +2,8 @@
   "intents": [
     {
       "tag": "greeting",
+      "label": "Greeting",
+      "smalltalk": true,
       "patterns": [
         "hi", "hello", "hey", "good morning", "good afternoon", "good evening",
         "is anyone there", "hey there", "hello bot", "greetings", "what's up",
@@ -14,6 +16,8 @@
     },
     {
       "tag": "goodbye",
+      "label": "Goodbye",
+      "smalltalk": true,
       "patterns": [
         "bye", "goodbye", "see you later", "talk to you later", "gotta go",
         "that's all thanks", "quit", "exit", "see ya", "i'm done", "close chat",
@@ -26,6 +30,8 @@
     },
     {
       "tag": "thanks",
+      "label": "Thanks",
+      "smalltalk": true,
       "patterns": [
         "thanks", "thank you", "that's helpful", "thanks a lot", "appreciate it",
         "thank you so much", "great, thanks", "cool thanks", "thanks for the info",
@@ -39,6 +45,7 @@
     },
     {
       "tag": "admissions",
+      "label": "Admissions",
       "patterns": [
         "how do i apply for admission", "what is the admission process",
         "when does admission start", "admission deadline",
@@ -55,6 +62,7 @@
     },
     {
       "tag": "library_hours",
+      "label": "Library hours",
       "patterns": [
         "what time does the library open", "library timings",
         "when does the library close", "is the library open on sunday",
@@ -69,6 +77,7 @@
     },
     {
       "tag": "exam_schedule",
+      "label": "Exam schedule",
       "patterns": [
         "when are the exams", "exam schedule", "exam timetable",
         "when does the semester exam start", "date sheet for exams",
@@ -83,6 +92,7 @@
     },
     {
       "tag": "fees",
+      "label": "Fees",
       "patterns": [
         "what is the semester fee", "how much is the tuition fee",
         "when is the fee due", "fee payment deadline", "how do i pay my fees",
@@ -96,6 +106,7 @@
     },
     {
       "tag": "hostel",
+      "label": "Hostel",
       "patterns": [
         "how do i apply for hostel", "hostel fees",
         "is hostel available for first years", "hostel rules", "hostel timings",
@@ -110,6 +121,7 @@
     },
     {
       "tag": "placement",
+      "label": "Placements",
       "patterns": [
         "which companies visit for placement", "placement statistics",
         "average package", "when do placements start", "how is the placement cell",
@@ -124,6 +136,7 @@
     },
     {
       "tag": "contact",
+      "label": "Contact details",
       "patterns": [
         "how do i contact the college", "college phone number",
         "college email address", "where is the admin office",
@@ -138,6 +151,7 @@
     },
     {
       "tag": "scholarships",
+      "label": "Scholarships",
       "patterns": [
         "am i eligible for a scholarship", "how do i apply for a scholarship",
         "scholarship application deadline", "merit scholarship criteria",
@@ -152,6 +166,7 @@
     },
     {
       "tag": "transport",
+      "label": "Transport",
       "patterns": [
         "is there a college bus service", "bus route timings",
         "how much does the bus pass cost", "which areas does the college bus cover",
@@ -165,6 +180,7 @@
     },
     {
       "tag": "wifi_it_support",
+      "label": "Wi-Fi & IT support",
       "patterns": [
         "wifi is not working in my hostel", "how do i connect to campus wifi",
         "wifi password for students", "internet is very slow on campus",
@@ -178,6 +194,7 @@
     },
     {
       "tag": "complaint",
+      "label": "Complaints & grievances",
       "patterns": [
         "i want to file a complaint", "how do i report ragging",
         "who handles student complaints", "there's an issue with my hostel room",
