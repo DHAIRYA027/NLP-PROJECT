@@ -1,0 +1,18 @@
+# Tool configuration only; this project is run from the repository root, not installed.
+
+[tool.ruff]
+line-length = 110
+extend-exclude = ["venv", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+# zip(strict=...) needs Python 3.10; this project supports 3.9.
+ignore = ["B905"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+filterwarnings = [
+    # matplotlib's vendored pyparsing usage triggers deprecation noise on import.
+    "ignore::DeprecationWarning:matplotlib",
+]

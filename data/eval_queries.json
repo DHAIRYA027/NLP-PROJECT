@@ -1,0 +1,158 @@
+{
+  "_comment": "Held-out evaluation queries; none appear in intents.json. 'dev' splits (in_scope_dev, out_of_scope with split=dev) are used to choose the confidence threshold; 'test' splits are only used for final reporting. 'near' = campus-flavoured but not covered by any intent; 'far' = unrelated to the campus.",
+  "in_scope_dev": [
+    {"text": "hello there, can someone help me?", "intent": "greeting"},
+    {"text": "hi, i need some help", "intent": "greeting"},
+
+    {"text": "i think i'm finished, bye", "intent": "goodbye"},
+    {"text": "time for me to leave, goodbye", "intent": "goodbye"},
+
+    {"text": "thank you very much for the answer", "intent": "thanks"},
+    {"text": "that answered my question, thanks", "intent": "thanks"},
+
+    {"text": "what is the procedure to get into this college", "intent": "admissions"},
+    {"text": "when can i submit my application form", "intent": "admissions"},
+
+    {"text": "what are the opening hours of the library", "intent": "library_hours"},
+    {"text": "is the library open late at night", "intent": "library_hours"},
+
+    {"text": "when will the exam timetable be released", "intent": "exam_schedule"},
+    {"text": "what is the schedule for the supplementary exams", "intent": "exam_schedule"},
+
+    {"text": "what is the total fee for one year", "intent": "fees"},
+    {"text": "how do i pay the tuition online", "intent": "fees"},
+
+    {"text": "how do i apply for a hostel room", "intent": "hostel"},
+    {"text": "what time do the hostel gates close", "intent": "hostel"},
+
+    {"text": "which companies come for campus placements", "intent": "placement"},
+    {"text": "what is the average package for students", "intent": "placement"},
+
+    {"text": "what is the email id of the college", "intent": "contact"},
+    {"text": "where can i find the college address", "intent": "contact"},
+
+    {"text": "how can i apply for a merit scholarship", "intent": "scholarships"},
+    {"text": "are there any financial aid options for poor students", "intent": "scholarships"},
+
+    {"text": "what are the timings of the college bus", "intent": "transport"},
+    {"text": "how do i get a bus pass", "intent": "transport"},
+
+    {"text": "how do i connect to the wifi on campus", "intent": "wifi_it_support"},
+    {"text": "the student portal login is not working", "intent": "wifi_it_support"},
+
+    {"text": "i would like to complain about ragging", "intent": "complaint"},
+    {"text": "where can i raise a grievance", "intent": "complaint"}
+  ],
+  "in_scope_test": [
+    {"text": "hello, is anyone around?", "intent": "greeting"},
+    {"text": "hey, good to see you", "intent": "greeting"},
+    {"text": "morning!", "intent": "greeting"},
+
+    {"text": "alright, i'll leave now", "intent": "goodbye"},
+    {"text": "that will be all, goodbye", "intent": "goodbye"},
+    {"text": "ok bye for now", "intent": "goodbye"},
+
+    {"text": "thanks for your help", "intent": "thanks"},
+    {"text": "many thanks", "intent": "thanks"},
+    {"text": "this was really useful, thank you", "intent": "thanks"},
+
+    {"text": "what are the requirements to get admitted", "intent": "admissions"},
+    {"text": "how can i enroll in the btech program", "intent": "admissions"},
+    {"text": "last date to submit the admission application", "intent": "admissions"},
+
+    {"text": "until what time can i study in the library", "intent": "library_hours"},
+    {"text": "does the library stay open on weekends", "intent": "library_hours"},
+    {"text": "libary timings on saturday", "intent": "library_hours"},
+
+    {"text": "what is the date of the final exams", "intent": "exam_schedule"},
+    {"text": "how do i get my hall ticket for the exam", "intent": "exam_schedule"},
+    {"text": "when r the semester exms", "intent": "exam_schedule"},
+
+    {"text": "how much do i have to pay each semester", "intent": "fees"},
+    {"text": "what happens if i miss the fee deadline", "intent": "fees"},
+    {"text": "fee paymnt last date", "intent": "fees"},
+
+    {"text": "how can i get a room in the hostel", "intent": "hostel"},
+    {"text": "what is the hostel curfew", "intent": "hostel"},
+    {"text": "are visitors allowed in the hostel", "intent": "hostel"},
+
+    {"text": "which companies recruit from this college", "intent": "placement"},
+    {"text": "what is the highest salary package offered", "intent": "placement"},
+    {"text": "when does campus recruitment begin", "intent": "placement"},
+
+    {"text": "what is the phone number of the college office", "intent": "contact"},
+    {"text": "how can i email the administration", "intent": "contact"},
+    {"text": "where is the principal's office", "intent": "contact"},
+
+    {"text": "can i get a scholarship if my family income is low", "intent": "scholarships"},
+    {"text": "last date to apply for scholarship", "intent": "scholarships"},
+    {"text": "which documents are required for the scholarship application", "intent": "scholarships"},
+
+    {"text": "does the college provide bus facility", "intent": "transport"},
+    {"text": "what is the cost of a bus pass", "intent": "transport"},
+    {"text": "where can i park my bike on campus", "intent": "transport"},
+
+    {"text": "my laptop cannot connect to the campus wifi", "intent": "wifi_it_support"},
+    {"text": "i forgot my student portal password", "intent": "wifi_it_support"},
+    {"text": "the internet is not working in the computer lab", "intent": "wifi_it_support"},
+
+    {"text": "i want to report a problem with my professor", "intent": "complaint"},
+    {"text": "someone is harassing me, where do i complain", "intent": "complaint"},
+    {"text": "how do i submit a grievance", "intent": "complaint"}
+  ],
+  "out_of_scope": [
+    {"text": "what is the weather like today", "kind": "far", "split": "dev"},
+    {"text": "tell me a joke", "kind": "far", "split": "dev"},
+    {"text": "who won the cricket match yesterday", "kind": "far", "split": "dev"},
+    {"text": "how do i cook pasta", "kind": "far", "split": "dev"},
+    {"text": "what is the capital of france", "kind": "far", "split": "dev"},
+    {"text": "can you recommend a good movie", "kind": "far", "split": "dev"},
+    {"text": "what is two plus two", "kind": "far", "split": "dev"},
+    {"text": "who is the prime minister of india", "kind": "far", "split": "dev"},
+    {"text": "how tall is mount everest", "kind": "far", "split": "dev"},
+    {"text": "play some music", "kind": "far", "split": "dev"},
+    {"text": "what is the meaning of life", "kind": "far", "split": "dev"},
+    {"text": "translate hello into spanish", "kind": "far", "split": "dev"},
+    {"text": "how do i lose weight fast", "kind": "far", "split": "dev"},
+    {"text": "what time is it in tokyo", "kind": "far", "split": "dev"},
+    {"text": "tell me about the stock market", "kind": "far", "split": "dev"},
+    {"text": "what is your favorite color", "kind": "far", "split": "dev"},
+    {"text": "how far is the moon from earth", "kind": "far", "split": "dev"},
+    {"text": "write me a poem about the sea", "kind": "far", "split": "dev"},
+    {"text": "which phone should i buy", "kind": "far", "split": "dev"},
+    {"text": "how do airplanes fly", "kind": "far", "split": "dev"},
+    {"text": "what is the canteen menu for today", "kind": "near", "split": "dev"},
+    {"text": "can i bring my pet to campus", "kind": "near", "split": "dev"},
+    {"text": "who is the vice chancellor of the university", "kind": "near", "split": "dev"},
+    {"text": "is there a swimming pool on campus", "kind": "near", "split": "dev"},
+    {"text": "how do i join the music club", "kind": "near", "split": "dev"},
+    {"text": "when is the college annual fest", "kind": "near", "split": "dev"},
+
+    {"text": "will it rain tomorrow", "kind": "far", "split": "test"},
+    {"text": "sing me a song", "kind": "far", "split": "test"},
+    {"text": "who is the best football player in the world", "kind": "far", "split": "test"},
+    {"text": "give me a recipe for chocolate cake", "kind": "far", "split": "test"},
+    {"text": "what is the largest ocean on earth", "kind": "far", "split": "test"},
+    {"text": "suggest a good book to read", "kind": "far", "split": "test"},
+    {"text": "what is the square root of 144", "kind": "far", "split": "test"},
+    {"text": "who wrote romeo and juliet", "kind": "far", "split": "test"},
+    {"text": "how do i fix my car engine", "kind": "far", "split": "test"},
+    {"text": "what is bitcoin", "kind": "far", "split": "test"},
+    {"text": "order me a pizza", "kind": "far", "split": "test"},
+    {"text": "how old is the universe", "kind": "far", "split": "test"},
+    {"text": "what is the speed of light", "kind": "far", "split": "test"},
+    {"text": "tell me a fun fact about dogs", "kind": "far", "split": "test"},
+    {"text": "how do i learn to play guitar", "kind": "far", "split": "test"},
+    {"text": "what is the best programming language", "kind": "far", "split": "test"},
+    {"text": "what is the news today", "kind": "far", "split": "test"},
+    {"text": "how to tie a tie", "kind": "far", "split": "test"},
+    {"text": "what is the population of japan", "kind": "far", "split": "test"},
+    {"text": "how do i bake bread", "kind": "far", "split": "test"},
+    {"text": "what food is served in the cafeteria", "kind": "near", "split": "test"},
+    {"text": "are pets allowed in the hostel", "kind": "near", "split": "test"},
+    {"text": "who is the principal of the college", "kind": "near", "split": "test"},
+    {"text": "does the college have a gym", "kind": "near", "split": "test"},
+    {"text": "how can i join the coding club", "kind": "near", "split": "test"},
+    {"text": "when does the sports day happen", "kind": "near", "split": "test"}
+  ]
+}

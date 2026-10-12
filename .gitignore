@@ -13,3 +13,7 @@ data/intent_model.joblib
 .DS_Store
 .vscode/
 .idea/
+
+# Local tooling
+.ruff_cache/
+.claude/

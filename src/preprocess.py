@@ -1,4 +1,10 @@
+"""Text preprocessing: cleaning, tokenization, stopword removal, lemmatization."""
+
+from __future__ import annotations
+
+import hashlib
 import re
+
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -12,19 +18,43 @@ _REQUIRED_NLTK_DATA = [
     ("corpora/omw-1.4", "omw-1.4"),
 ]
 
+# Negations change meaning ("wifi is not working"), so they are kept even though
+# NLTK lists them as stopwords. Question words (what/how/when/...) are deliberately
+# still removed: keeping them raised CV accuracy by under one point (within noise)
+# but made off-topic queries like "what is the capital of france" look like
+# in-scope ones, cutting the dev out-of-scope rejection score from 0.87 to 0.79.
+KEPT_STOPWORDS = frozenset({"no", "not", "nor"})
 
-def ensure_nltk_data():
-    for path, package in _REQUIRED_NLTK_DATA:
+
+def _nltk_resource_available(path: str) -> bool:
+    # NLTK ships some corpora (wordnet, omw-1.4) only as .zip files, and
+    # nltk.data.find() does not resolve the extension-less name to them.
+    for candidate in (path, f"{path}.zip"):
         try:
-            nltk.data.find(path)
+            nltk.data.find(candidate)
+            return True
         except LookupError:
+            continue
+    return False
+
+
+def ensure_nltk_data() -> None:
+    """Download the NLTK resources this project needs, but only if they are missing."""
+    for path, package in _REQUIRED_NLTK_DATA:
+        if not _nltk_resource_available(path):
             nltk.download(package, quiet=True)
 
 
 ensure_nltk_data()
 
 _lemmatizer = WordNetLemmatizer()
-_stopwords = set(stopwords.words("english"))
+_stopwords = frozenset(stopwords.words("english")) - KEPT_STOPWORDS
+
+
+def config_signature() -> str:
+    """Short hash of the preprocessing configuration, used to invalidate cached models."""
+    payload = "|".join(sorted(_stopwords))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:12]
 
 
 def clean_text(text: str) -> str:
