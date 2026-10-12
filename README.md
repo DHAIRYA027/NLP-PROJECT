@@ -151,34 +151,7 @@ NLP-PROJECT/
 └── .github/workflows/ci.yml
 ```
 
-## Using it for your own college
 
-The answers in `data/intents.json` are **placeholder text** (fees, timings, e-mail
-addresses are invented). Replace them with your college's real information, add
-patterns for any new intents, then:
-
-1. `make test` — the data-integrity tests catch duplicate patterns and train/test leakage.
-2. `make eval` — retrains everything and prints new accuracy and threshold numbers.
-3. Update `DEFAULT_CONFIDENCE_THRESHOLD` in `src/chatbot.py` if the dev-selected value changed
-   (a test reminds you), and refresh the tables in this README and REPORT.md.
-
-The cached model in `data/intent_model.joblib` rebuilds itself automatically whenever the
-intents, model type or preprocessing change.
-
-## Limitations
-
-- **Small, hand-written data.** 174 training patterns and 87 corpus sentences; the
-  evaluation questions were written by the project authors, not collected from real
-  users. Treat the numbers as indicative, not as a production forecast.
-- **Off-topic questions that look like campus questions** (e.g. "are pets allowed in the
-  hostel") get a confident canned answer about 50% of the time at the default
-  threshold. A trained "off-topic" class would help; see REPORT.md §6.
-- **Shortcut words.** A few generic words pull queries toward one intent ("good" →
-  greeting, "campus" → Wi-Fi), which causes some confident mistakes.
-- **No conversation memory.** Each message is handled independently.
-- **The language-model sample is rough** by design: a trigram model trained on ~2,000
-  words produces locally plausible, globally meaningless text. It is labelled as such
-  and is never presented as an answer.
 
 ## License
 
