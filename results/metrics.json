@@ -1,33 +1,371 @@
 {
-  "classifiers": {
+  "dataset": {
+    "intents": 14,
+    "patterns": 174
+  },
+  "classifiers_cv": {
     "naive_bayes": {
-      "accuracy": 0.7413793103448276,
-      "macro_f1": 0.7416699217344964,
-      "weighted_f1": 0.7380398429895723
+      "word": {
+        "accuracy": {
+          "mean": 0.7402298850574712,
+          "std": 0.028481636076698544
+        },
+        "macro_f1": {
+          "mean": 0.7263237252498449,
+          "std": 0.03779334037283534
+        }
+      },
+      "word+char": {
+        "accuracy": {
+          "mean": 0.7965517241379311,
+          "std": 0.028987402788318368
+        },
+        "macro_f1": {
+          "mean": 0.7815980712409285,
+          "std": 0.03664034206974747
+        }
+      }
     },
     "logistic_regression": {
-      "accuracy": 0.7816091954022989,
-      "macro_f1": 0.7915517233211683,
-      "weighted_f1": 0.7855275949069861
+      "word": {
+        "accuracy": {
+          "mean": 0.7954022988505748,
+          "std": 0.032019283395825555
+        },
+        "macro_f1": {
+          "mean": 0.7886840526911291,
+          "std": 0.0322487260455679
+        }
+      },
+      "word+char": {
+        "accuracy": {
+          "mean": 0.8126436781609194,
+          "std": 0.025077499114105086
+        },
+        "macro_f1": {
+          "mean": 0.7995801195381027,
+          "std": 0.02961369534723186
+        }
+      }
     },
     "linear_svm": {
-      "accuracy": 0.7758620689655172,
-      "macro_f1": 0.7773356257418715,
-      "weighted_f1": 0.7741106125933991
+      "word": {
+        "accuracy": {
+          "mean": 0.7850574712643676,
+          "std": 0.03382514705646473
+        },
+        "macro_f1": {
+          "mean": 0.7800180812520485,
+          "std": 0.03570848587824188
+        }
+      },
+      "word+char": {
+        "accuracy": {
+          "mean": 0.8057471264367816,
+          "std": 0.03749311823057492
+        },
+        "macro_f1": {
+          "mean": 0.7913442346635623,
+          "std": 0.03892210845122143
+        }
+      }
+    }
+  },
+  "zero_evidence_diagnostic": {
+    "word": {
+      "items_with_no_known_features": 23,
+      "errors": 38,
+      "errors_with_no_known_features": 18,
+      "errors_predicted_greeting": 19,
+      "errors_predicted_greeting_with_no_known_features": 18
+    },
+    "word+char": {
+      "items_with_no_known_features": 0,
+      "errors": 33,
+      "errors_with_no_known_features": 0,
+      "errors_predicted_greeting": 10,
+      "errors_predicted_greeting_with_no_known_features": 0
+    }
+  },
+  "classifiers_held_out": {
+    "naive_bayes": {
+      "word": {
+        "accuracy": 0.7857142857142857,
+        "macro_f1": 0.7504761904761905
+      },
+      "word+char": {
+        "accuracy": 0.8809523809523809,
+        "macro_f1": 0.873639455782313
+      }
+    },
+    "logistic_regression": {
+      "word": {
+        "accuracy": 0.8333333333333334,
+        "macro_f1": 0.7982539682539682
+      },
+      "word+char": {
+        "accuracy": 0.8809523809523809,
+        "macro_f1": 0.8755102040816327
+      }
+    },
+    "linear_svm": {
+      "word": {
+        "accuracy": 0.7857142857142857,
+        "macro_f1": 0.7498412698412699
+      },
+      "word+char": {
+        "accuracy": 0.8809523809523809,
+        "macro_f1": 0.873639455782313
+      }
+    }
+  },
+  "error_analysis": {
+    "cv_top_confusions": [
+      {
+        "true": "goodbye",
+        "predicted": "greeting",
+        "count": 5
+      },
+      {
+        "true": "thanks",
+        "predicted": "goodbye",
+        "count": 3
+      },
+      {
+        "true": "thanks",
+        "predicted": "greeting",
+        "count": 2
+      },
+      {
+        "true": "complaint",
+        "predicted": "contact",
+        "count": 2
+      },
+      {
+        "true": "greeting",
+        "predicted": "goodbye",
+        "count": 1
+      },
+      {
+        "true": "goodbye",
+        "predicted": "contact",
+        "count": 1
+      },
+      {
+        "true": "goodbye",
+        "predicted": "thanks",
+        "count": 1
+      },
+      {
+        "true": "goodbye",
+        "predicted": "exam_schedule",
+        "count": 1
+      }
+    ],
+    "held_out_misses": [
+      {
+        "text": "alright, i'll leave now",
+        "expected": "goodbye",
+        "predicted": "greeting",
+        "confidence": 0.1665386071047557
+      },
+      {
+        "text": "how can i enroll in the btech program",
+        "expected": "admissions",
+        "predicted": "greeting",
+        "confidence": 0.11740723336694496
+      },
+      {
+        "text": "which companies recruit from this college",
+        "expected": "placement",
+        "predicted": "contact",
+        "confidence": 0.42369138750122526
+      },
+      {
+        "text": "when does campus recruitment begin",
+        "expected": "placement",
+        "predicted": "wifi_it_support",
+        "confidence": 0.6085448077528789
+      },
+      {
+        "text": "where can i park my bike on campus",
+        "expected": "transport",
+        "predicted": "wifi_it_support",
+        "confidence": 0.6671717988462462
+      }
+    ]
+  },
+  "threshold": {
+    "chosen": 0.37,
+    "dev_balanced_score_at_chosen": 0.8681318681318682,
+    "test_at_chosen": {
+      "in_scope_answered_correctly": 0.7380952380952381,
+      "in_scope_answered_wrongly": 0.07142857142857142,
+      "in_scope_sent_to_fallback": 0.19047619047619047,
+      "out_of_scope_rejected": 0.8461538461538461,
+      "out_of_scope_far_rejected": 0.95,
+      "out_of_scope_near_rejected": 0.5
+    },
+    "pattern_cv_alternative": {
+      "chosen": 0.25,
+      "test": {
+        "in_scope_answered_correctly": 0.8333333333333334,
+        "in_scope_answered_wrongly": 0.07142857142857142,
+        "in_scope_sent_to_fallback": 0.09523809523809523,
+        "out_of_scope_rejected": 0.8461538461538461,
+        "out_of_scope_far_rejected": 0.95,
+        "out_of_scope_near_rejected": 0.5
+      }
+    },
+    "test_operating_curve": {
+      "0.20": {
+        "in_scope_answered_correctly": 0.8809523809523809,
+        "in_scope_answered_wrongly": 0.07142857142857142,
+        "in_scope_sent_to_fallback": 0.047619047619047616,
+        "out_of_scope_rejected": 0.7692307692307693,
+        "out_of_scope_far_rejected": 0.9,
+        "out_of_scope_near_rejected": 0.3333333333333333
+      },
+      "0.30": {
+        "in_scope_answered_correctly": 0.7857142857142857,
+        "in_scope_answered_wrongly": 0.07142857142857142,
+        "in_scope_sent_to_fallback": 0.14285714285714285,
+        "out_of_scope_rejected": 0.8461538461538461,
+        "out_of_scope_far_rejected": 0.95,
+        "out_of_scope_near_rejected": 0.5
+      },
+      "0.40": {
+        "in_scope_answered_correctly": 0.7380952380952381,
+        "in_scope_answered_wrongly": 0.07142857142857142,
+        "in_scope_sent_to_fallback": 0.19047619047619047,
+        "out_of_scope_rejected": 0.8461538461538461,
+        "out_of_scope_far_rejected": 0.95,
+        "out_of_scope_near_rejected": 0.5
+      },
+      "0.50": {
+        "in_scope_answered_correctly": 0.7142857142857143,
+        "in_scope_answered_wrongly": 0.047619047619047616,
+        "in_scope_sent_to_fallback": 0.23809523809523808,
+        "out_of_scope_rejected": 0.8461538461538461,
+        "out_of_scope_far_rejected": 0.95,
+        "out_of_scope_near_rejected": 0.5
+      },
+      "0.60": {
+        "in_scope_answered_correctly": 0.6904761904761905,
+        "in_scope_answered_wrongly": 0.047619047619047616,
+        "in_scope_sent_to_fallback": 0.2619047619047619,
+        "out_of_scope_rejected": 0.8461538461538461,
+        "out_of_scope_far_rejected": 0.95,
+        "out_of_scope_near_rejected": 0.5
+      },
+      "0.70": {
+        "in_scope_answered_correctly": 0.6428571428571429,
+        "in_scope_answered_wrongly": 0.0,
+        "in_scope_sent_to_fallback": 0.35714285714285715,
+        "out_of_scope_rejected": 0.9230769230769231,
+        "out_of_scope_far_rejected": 0.95,
+        "out_of_scope_near_rejected": 0.8333333333333334
+      },
+      "0.80": {
+        "in_scope_answered_correctly": 0.5238095238095238,
+        "in_scope_answered_wrongly": 0.0,
+        "in_scope_sent_to_fallback": 0.47619047619047616,
+        "out_of_scope_rejected": 0.9230769230769231,
+        "out_of_scope_far_rejected": 0.95,
+        "out_of_scope_near_rejected": 0.8333333333333334
+      }
+    },
+    "test_baseline_config": {
+      "model": "naive_bayes",
+      "features": "word",
+      "threshold": 0.2,
+      "in_scope_answered_correctly": 0.38095238095238093,
+      "in_scope_answered_wrongly": 0.0,
+      "in_scope_sent_to_fallback": 0.6190476190476191,
+      "out_of_scope_rejected": 0.9230769230769231,
+      "out_of_scope_far_rejected": 0.95,
+      "out_of_scope_near_rejected": 0.8333333333333334
+    },
+    "counts": {
+      "in_scope_dev": 28,
+      "in_scope_test": 42,
+      "oos_dev": 26,
+      "oos_test_far": 20,
+      "oos_test_near": 6
     }
   },
   "language_model": {
-    "1": {
-      "add_k": 401.7721251098386,
-      "interpolation": 401.7721251098386
+    "corpus": {
+      "sentences": 87,
+      "tokens": 1954,
+      "folds": 5
     },
-    "2": {
-      "add_k": 480.95935565257116,
-      "interpolation": 322.77142905693466
+    "perplexity": {
+      "1": {
+        "add_k_1": {
+          "mean": 365.85847327092426,
+          "std": 15.65130154561476
+        },
+        "add_k_tuned": {
+          "mean": 365.85847327092426,
+          "std": 15.65130154561476
+        },
+        "interpolation_hand_set": {
+          "mean": 365.85847327092426,
+          "std": 15.65130154561476
+        },
+        "interpolation_tuned": {
+          "mean": 365.85847327092426,
+          "std": 15.65130154561476
+        }
+      },
+      "2": {
+        "add_k_1": {
+          "mean": 465.3127769388813,
+          "std": 7.946236251312275
+        },
+        "add_k_tuned": {
+          "mean": 323.1955502399552,
+          "std": 19.031349245354285
+        },
+        "interpolation_hand_set": {
+          "mean": 344.45239628740904,
+          "std": 41.82096063875011
+        },
+        "interpolation_tuned": {
+          "mean": 240.82701912995853,
+          "std": 22.24639862158654
+        }
+      },
+      "3": {
+        "add_k_1": {
+          "mean": 552.4570372301414,
+          "std": 7.796404409079558
+        },
+        "add_k_tuned": {
+          "mean": 451.04566059784804,
+          "std": 30.710440979542536
+        },
+        "interpolation_hand_set": {
+          "mean": 305.6594918823738,
+          "std": 41.03655180180821
+        },
+        "interpolation_tuned": {
+          "mean": 220.9922106528067,
+          "std": 25.577433829853824
+        }
+      }
     },
-    "3": {
-      "add_k": 559.1593376379328,
-      "interpolation": 261.06675700418936
+    "selected_interpolation_weights": {
+      "2": [
+        0.7,
+        0.3
+      ],
+      "3": [
+        0.6,
+        0.2,
+        0.2
+      ]
     }
   }
 }

@@ -1,0 +1,524 @@
+{
+  "entries": [
+    {
+      "id": "adm-process",
+      "category": "Admissions",
+      "questions": [
+        "How do I apply for admission?",
+        "What is the admission process?",
+        "How can I take admission in this college?",
+        "Admission procedure",
+        "Steps to get admission",
+        "How to join this college"
+      ],
+      "answer": "Admissions are handled online:\n\n1. Register on the college admission portal\n2. Fill in the application form and upload your marksheets and ID proof\n3. Pay the application fee\n4. Wait for the merit list, then attend document verification and counselling\n\nYou can track your application status from the same portal."
+    },
+    {
+      "id": "adm-eligibility",
+      "category": "Admissions",
+      "questions": [
+        "What is the eligibility criteria for B.Tech?",
+        "Eligibility for admission",
+        "What marks are required for admission?",
+        "Minimum percentage required to get admission",
+        "Who can apply for engineering?",
+        "Am I eligible to apply?",
+        "What is the admission cutoff?",
+        "Cut off marks for admission"
+      ],
+      "answer": "For B.Tech you need a pass in Class 12 with Physics and Mathematics plus Chemistry, Biology, Computer Science or a technical subject, with the minimum aggregate set by the university. A valid entrance exam score is considered where applicable. The exact cut-offs are published each year on the Admissions page."
+    },
+    {
+      "id": "adm-docs",
+      "category": "Admissions",
+      "questions": [
+        "Which documents are required for admission?",
+        "Documents needed for admission",
+        "What certificates do I need to submit?",
+        "Document verification list",
+        "What should I carry for counselling?"
+      ],
+      "answer": "Keep these ready, both originals and photocopies:\n\n- Class 10 and Class 12 marksheets\n- Entrance exam scorecard\n- Transfer or migration certificate\n- Government ID proof\n- Passport size photographs\n- Category certificate, if applicable"
+    },
+    {
+      "id": "adm-dates",
+      "category": "Admissions",
+      "questions": [
+        "When does admission start?",
+        "Last date to apply for admission",
+        "Admission deadline",
+        "When do applications open?",
+        "Admission dates this year"
+      ],
+      "answer": "Admission dates are announced on the official website every year. Applications usually open early in the admission cycle and close before counselling begins. Please check the Admissions page for the current schedule."
+    },
+    {
+      "id": "adm-scholarship",
+      "category": "Admissions",
+      "questions": [
+        "Are scholarships available?",
+        "How do I get a scholarship?",
+        "Merit scholarship details",
+        "Is there any financial aid for students?",
+        "Scholarship eligibility"
+      ],
+      "answer": "Merit-based scholarships are offered on the basis of entrance rank and academic performance, and need-based aid is available for eligible students. Apply through the scholarship section of the student portal with income and marks documents. The scholarship cell can confirm the current criteria."
+    },
+    {
+      "id": "fee-structure",
+      "category": "Fees",
+      "questions": [
+        "What is the fee structure?",
+        "How much are the tuition fees?",
+        "Course fees",
+        "What is the cost of the B.Tech program?",
+        "Total fees per year",
+        "How much do I have to pay for the course?"
+      ],
+      "answer": "Tuition depends on the program and is listed in the official fee notice on the website. It is paid semester-wise or annually. Hostel, mess and examination fees are charged separately. The accounts office can share the latest fee sheet for your program."
+    },
+    {
+      "id": "fee-payment",
+      "category": "Fees",
+      "questions": [
+        "How can I pay my fees?",
+        "Fee payment methods",
+        "Pay fees online",
+        "Can I pay fees by UPI?",
+        "Fee payment portal",
+        "Can I pay fees by cash or demand draft?"
+      ],
+      "answer": "Fees can be paid online through the student portal using UPI, net banking, debit or credit card. Offline payment is accepted at the accounts office by demand draft. Always keep the payment receipt, as it is needed for hostel and exam registration."
+    },
+    {
+      "id": "fee-deadline",
+      "category": "Fees",
+      "questions": [
+        "What is the last date to pay fees?",
+        "Fee due date",
+        "Late fee penalty",
+        "What if I miss the fee deadline?",
+        "Fine for delayed fee payment"
+      ],
+      "answer": "The last date for each semester is announced on the notice board and the portal. Payments after the due date attract a late fee, and registration for the semester can be held until dues are cleared. If you have a genuine problem, apply to the accounts office before the deadline."
+    },
+    {
+      "id": "fee-refund",
+      "category": "Fees",
+      "questions": [
+        "What is the refund policy?",
+        "Can I get a refund if I withdraw my admission?",
+        "Fee refund process",
+        "How do I cancel admission and get my money back?",
+        "Refund if I leave the college"
+      ],
+      "answer": "If you withdraw your admission, a refund is processed as per the university refund schedule, which depends on how early you withdraw. Submit a written withdrawal request with your fee receipt to the accounts office. Some charges, such as the application fee, are non-refundable."
+    },
+    {
+      "id": "fee-installments",
+      "category": "Fees",
+      "questions": [
+        "Can I pay fees in installments?",
+        "Is there an installment option for fees?",
+        "Can I pay fees in two parts?",
+        "Fee payment in parts"
+      ],
+      "answer": "Semester-wise payment is the default. For other installment arrangements, submit a request to the accounts office before the due date and they will tell you what is allowed in your case."
+    },
+    {
+      "id": "lib-hours",
+      "category": "Library",
+      "questions": [
+        "What are the library timings?",
+        "When does the library open?",
+        "Library opening hours",
+        "Is the library open on Sunday?",
+        "What time does the library close?",
+        "Is the library open on weekends?"
+      ],
+      "answer": "The central library is open from 8:00 AM to 8:00 PM, Monday to Saturday, and from 10:00 AM to 4:00 PM on Sundays. Hours are extended during exam weeks."
+    },
+    {
+      "id": "lib-borrow",
+      "category": "Library",
+      "questions": [
+        "How many books can I borrow?",
+        "Book issue limit",
+        "How long can I keep a library book?",
+        "Library borrowing rules",
+        "How do I issue a book?",
+        "Can I renew a book?"
+      ],
+      "answer": "Students can issue up to 3 books at a time for 14 days using their ID card, and can renew once if no one else has reserved the book. Reference books and journals stay in the library."
+    },
+    {
+      "id": "lib-fine",
+      "category": "Library",
+      "questions": [
+        "What is the late fine for library books?",
+        "Library fine",
+        "What if I lose a library book?",
+        "Overdue book penalty",
+        "I returned my book late, what is the fine?"
+      ],
+      "answer": "A small per-day fine is charged on overdue books. If you lose a book, you must replace it with the same edition or pay its current price plus a processing charge. Report it to the librarian as early as possible."
+    },
+    {
+      "id": "lib-digital",
+      "category": "Library",
+      "questions": [
+        "Does the library have e-books?",
+        "Digital library access",
+        "Can I access journals online?",
+        "IEEE access for students",
+        "How do I use e-resources?",
+        "Can I read research papers from my hostel?"
+      ],
+      "answer": "Yes. The library subscribes to e-books and online journals, which you can use from the campus network or through remote access with your student login. Ask at the library help desk to activate your account."
+    },
+    {
+      "id": "hostel-facilities",
+      "category": "Hostel",
+      "questions": [
+        "Tell me about hostel facilities",
+        "What facilities are available in the hostel?",
+        "Hostel amenities",
+        "What is available in the hostel rooms?",
+        "Dorm facilities",
+        "Is there wifi and laundry in the hostel?"
+      ],
+      "answer": "Hostels provide furnished rooms, Wi-Fi, a mess, laundry, common rooms, a reading hall, power backup and round-the-clock security with a warden on duty."
+    },
+    {
+      "id": "hostel-apply",
+      "category": "Hostel",
+      "questions": [
+        "How do I apply for the hostel?",
+        "Hostel admission process",
+        "Hostel application",
+        "How do I get a hostel room?",
+        "Hostel allotment",
+        "When can I apply for a hostel room?"
+      ],
+      "answer": "Hostel applications open after admission confirmation. Rooms are allotted on a first-come basis, so apply early through the student portal and pay the hostel fee to confirm your seat."
+    },
+    {
+      "id": "hostel-curfew",
+      "category": "Hostel",
+      "questions": [
+        "What is the hostel curfew?",
+        "Hostel timings",
+        "What time do the hostel gates close?",
+        "Curfew time",
+        "Entry time in the hostel",
+        "Can I come back late to the hostel?"
+      ],
+      "answer": "The curfew is 10 PM on weekdays. For late returns or special permission, inform the warden in advance."
+    },
+    {
+      "id": "hostel-fees",
+      "category": "Hostel",
+      "questions": [
+        "What are the hostel fees?",
+        "Hostel charges",
+        "How much does the hostel cost?",
+        "Mess charges",
+        "Hostel rent per year",
+        "How much do I have to pay for the hostel?",
+        "Hostel payment"
+      ],
+      "answer": "Hostel fees depend on the room type and are listed in the fee notice. Mess charges are billed separately. The hostel office can share the current rates."
+    },
+    {
+      "id": "hostel-visitors",
+      "category": "Hostel",
+      "questions": [
+        "Can my parents visit the hostel?",
+        "Visitor policy in the hostel",
+        "Are guests allowed in the hostel?",
+        "Can friends visit my room?"
+      ],
+      "answer": "Parents and guardians can meet students in the visitor area during visiting hours after registering at the gate. Guests are not permitted inside rooms."
+    },
+    {
+      "id": "exam-schedule",
+      "category": "Exams",
+      "questions": [
+        "When are the exams?",
+        "Exam schedule",
+        "Date sheet",
+        "When is the semester exam?",
+        "Examination dates",
+        "Exam timetable"
+      ],
+      "answer": "The exam schedule is published on the academic calendar and the student portal at least two weeks before the exams begin. Check the Examinations section for your semester's date sheet."
+    },
+    {
+      "id": "exam-admit",
+      "category": "Exams",
+      "questions": [
+        "How do I download my admit card?",
+        "Hall ticket download",
+        "Where can I get my admit card?",
+        "Admit card not available"
+      ],
+      "answer": "Admit cards are available on the student portal under Examinations about a week before the exams. You need cleared dues and the minimum attendance to download one. Carry a printout and your ID card to every exam."
+    },
+    {
+      "id": "exam-result",
+      "category": "Exams",
+      "questions": [
+        "When will the results be declared?",
+        "How do I check my results?",
+        "Where can I see my marks?",
+        "Semester result",
+        "Result date"
+      ],
+      "answer": "Results are usually declared a few weeks after the last exam and are posted on the student portal. You can log in with your enrollment number to view and download your marksheet."
+    },
+    {
+      "id": "exam-attendance",
+      "category": "Exams",
+      "questions": [
+        "What is the minimum attendance required?",
+        "Attendance criteria for exams",
+        "What happens if I have an attendance shortage?",
+        "Is 75 percent attendance compulsory?",
+        "Can I sit in the exam with low attendance?"
+      ],
+      "answer": "A minimum of 75 percent attendance is required to appear in the end-semester exams. Students with a shortage may be debarred unless they have an approved medical or special case, so submit documents to your department early."
+    },
+    {
+      "id": "exam-revaluation",
+      "category": "Exams",
+      "questions": [
+        "How do I apply for revaluation?",
+        "Re-evaluation process",
+        "Can I challenge my marks?",
+        "Recheck my answer sheet",
+        "I am not happy with my result"
+      ],
+      "answer": "You can apply for revaluation within a few days of the result by filling the form on the portal and paying the revaluation fee. The result of the revaluation is final."
+    },
+    {
+      "id": "exam-backlog",
+      "category": "Exams",
+      "questions": [
+        "How do I clear a backlog?",
+        "Supplementary exam",
+        "Reappear exam details",
+        "What if I fail a subject?",
+        "When are the backlog exams?"
+      ],
+      "answer": "If you fail a subject you can appear in the supplementary or reappear exam. Register for it on the portal within the notified window and pay the exam fee. Clearing backlogs early matters because many placement drives require none."
+    },
+    {
+      "id": "place-overview",
+      "category": "Placements",
+      "questions": [
+        "Tell me about placements",
+        "How are the placements?",
+        "Which companies visit the campus?",
+        "Placement record",
+        "Placement statistics",
+        "Do you have campus recruitment?"
+      ],
+      "answer": "The placement cell invites companies across IT, core engineering and consulting each year. Training, mock interviews and aptitude sessions begin in the pre-final year, and year-wise placement statistics are published by the cell."
+    },
+    {
+      "id": "place-eligibility",
+      "category": "Placements",
+      "questions": [
+        "What is the eligibility for placements?",
+        "Minimum CGPA for placement",
+        "Can students with backlogs sit for placements?",
+        "Placement criteria",
+        "Do I need a minimum percentage to sit for placements?"
+      ],
+      "answer": "Each company sets its own criteria, usually a minimum CGPA or percentage and no active backlogs. Register with the placement cell to see which drives you qualify for."
+    },
+    {
+      "id": "place-prep",
+      "category": "Placements",
+      "questions": [
+        "How do I prepare for placements?",
+        "Placement training",
+        "Mock interviews",
+        "Aptitude test preparation",
+        "Can you help with my resume?",
+        "Resume review"
+      ],
+      "answer": "The placement cell runs aptitude training, coding practice, mock interviews and resume workshops. Start early, build projects, and practise problem solving regularly."
+    },
+    {
+      "id": "place-intern",
+      "category": "Placements",
+      "questions": [
+        "Does the college help with internships?",
+        "Internship opportunities",
+        "How do I get an internship?",
+        "Summer internship",
+        "Is an internship mandatory?"
+      ],
+      "answer": "The placement cell shares internship openings and coordinates with companies. Many programs include a summer internship or industrial training, and your department can issue the required letters."
+    },
+    {
+      "id": "campus-wifi",
+      "category": "Campus life",
+      "questions": [
+        "How do I connect to the campus wifi?",
+        "Wifi password",
+        "Is there internet on campus?",
+        "Wifi is not working",
+        "Wifi in the hostel"
+      ],
+      "answer": "Campus Wi-Fi is available in academic blocks, the library and hostels. Log in with your student ID and portal password. If it is not working, raise a ticket with the IT helpdesk."
+    },
+    {
+      "id": "campus-canteen",
+      "category": "Campus life",
+      "questions": [
+        "What food options are on campus?",
+        "Canteen timings",
+        "Is there a mess or cafeteria?",
+        "Where can I eat on campus?",
+        "Is vegetarian food available?"
+      ],
+      "answer": "The campus has a central canteen and food courts serving breakfast, lunch, snacks and dinner, with vegetarian options. The hostel mess serves meals at fixed timings."
+    },
+    {
+      "id": "campus-transport",
+      "category": "Campus life",
+      "questions": [
+        "Is there a college bus?",
+        "Transport facility",
+        "Bus routes",
+        "How do I reach the campus?",
+        "Is there a shuttle from the city?"
+      ],
+      "answer": "College buses run on fixed routes from major city points, and registration is done through the transport office. Day scholars can also use public transport or cabs to reach the campus."
+    },
+    {
+      "id": "campus-sports",
+      "category": "Campus life",
+      "questions": [
+        "What sports facilities are there?",
+        "Is there a gym?",
+        "Sports ground and playground",
+        "Which games can I play on campus?"
+      ],
+      "answer": "The campus has playing grounds, indoor courts and a gym. Students can join college teams and inter-college tournaments through the sports office."
+    },
+    {
+      "id": "campus-clubs",
+      "category": "Campus life",
+      "questions": [
+        "Are there student clubs?",
+        "Technical and cultural societies",
+        "Extracurricular activities",
+        "How do I join a club?",
+        "What events happen on campus?"
+      ],
+      "answer": "There are technical, cultural and literary clubs. Recruitment usually happens at the start of the semester, and clubs organise fests, hackathons and workshops through the year."
+    },
+    {
+      "id": "campus-medical",
+      "category": "Campus life",
+      "questions": [
+        "Is there a medical facility on campus?",
+        "Doctor on campus",
+        "Health center",
+        "What do I do in a medical emergency?",
+        "Is there an ambulance?"
+      ],
+      "answer": "A health centre on campus provides first aid and basic consultation, and an ambulance is available for emergencies. In an emergency, contact the security desk or your warden immediately."
+    },
+    {
+      "id": "campus-id",
+      "category": "Campus life",
+      "questions": [
+        "How do I get a duplicate ID card?",
+        "I lost my ID card",
+        "ID card replacement",
+        "Where can I collect my ID card?"
+      ],
+      "answer": "Submit a written request along with the duplicate ID fee at the administrative office. Lost cards should be reported to the department first."
+    },
+    {
+      "id": "gen-contact",
+      "category": "General",
+      "questions": [
+        "How can I contact the college?",
+        "Helpdesk contact",
+        "Who do I contact for help?",
+        "Office phone number",
+        "Email address of the office",
+        "Where is the administrative office?"
+      ],
+      "answer": "Reach the student helpdesk through the Contact page on the college website, or visit the administrative block between 9:30 AM and 4:30 PM on working days."
+    },
+    {
+      "id": "gen-hello",
+      "category": "Chat",
+      "questions": [
+        "hi",
+        "hello",
+        "hey there",
+        "good morning",
+        "good evening",
+        "hello bot"
+      ],
+      "answer": "Hello! I'm the Campus Helpdesk bot. Ask me about admissions, fees, the library, hostel, exams, placements or campus life."
+    },
+    {
+      "id": "gen-thanks",
+      "category": "Chat",
+      "questions": [
+        "thanks",
+        "thank you",
+        "thanks a lot",
+        "that helped",
+        "thank you so much"
+      ],
+      "answer": "You're welcome! Ask me anything else about the campus."
+    },
+    {
+      "id": "gen-bye",
+      "category": "Chat",
+      "questions": [
+        "bye",
+        "goodbye",
+        "see you later",
+        "that is all",
+        "talk to you later"
+      ],
+      "answer": "Goodbye! Come back whenever you have a question about the campus."
+    },
+    {
+      "id": "gen-about",
+      "category": "Chat",
+      "questions": [
+        "Who are you?",
+        "What can you do?",
+        "What can I ask you?",
+        "help",
+        "What is this bot?",
+        "What topics do you know about?"
+      ],
+      "answer": "I'm a campus helpdesk assistant. I can answer questions about admissions, fees, the library, hostel, exams, placements and day-to-day campus life. Try asking in your own words."
+    },
+    {
+      "id": "gen-how",
+      "category": "Chat",
+      "questions": [
+        "How do you work?",
+        "Are you ChatGPT?",
+        "Are you an AI?",
+        "Which model do you use?",
+        "Do you use an LLM?",
+        "How were you built?"
+      ],
+      "answer": "I'm built with classical NLP, not a pretrained LLM. I clean and spell-correct your question, match it against a knowledge base with TF-IDF and cosine similarity, classify its intent with Naive Bayes, and use a trigram language model as an experimental fallback."
+    }
+  ]
+}
