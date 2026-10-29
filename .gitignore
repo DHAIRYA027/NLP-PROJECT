@@ -1,19 +1,4 @@
+venv/
 __pycache__/
 *.pyc
-*.pyo
-.pytest_cache/
-.mypy_cache/
-venv/
-.venv/
-env/
-*.egg-info/
-
-data/intent_model.joblib
-
 .DS_Store
-.vscode/
-.idea/
-
-# Local tooling
-.ruff_cache/
-.claude/

@@ -1,0 +1,176 @@
+{
+  "in_scope": [
+    {
+      "q": "whats the process to get into this college",
+      "id": "adm-process"
+    },
+    {
+      "q": "do i qualify for btech with pcm",
+      "id": "adm-eligibility"
+    },
+    {
+      "q": "list of papers to submit during counselling",
+      "id": "adm-docs"
+    },
+    {
+      "q": "when is the registration window",
+      "id": "adm-dates"
+    },
+    {
+      "q": "any fee waiver for toppers",
+      "id": "adm-scholarship"
+    },
+    {
+      "q": "how much is one semester tuition",
+      "id": "fee-structure"
+    },
+    {
+      "q": "can i use google pay for college fees",
+      "id": "fee-payment"
+    },
+    {
+      "q": "what if i pay fees after the due date",
+      "id": "fee-deadline"
+    },
+    {
+      "q": "will i get money back if i drop out",
+      "id": "fee-refund"
+    },
+    {
+      "q": "is the library open late in the evening",
+      "id": "lib-hours"
+    },
+    {
+      "q": "how many days can i keep a book",
+      "id": "lib-borrow"
+    },
+    {
+      "q": "fine for lost book",
+      "id": "lib-fine"
+    },
+    {
+      "q": "online journals access",
+      "id": "lib-digital"
+    },
+    {
+      "q": "what comes with the hostel room",
+      "id": "hostel-facilities"
+    },
+    {
+      "q": "how do i book a room in hostel",
+      "id": "hostel-apply"
+    },
+    {
+      "q": "hostel curfew timing",
+      "id": "hostel-curfew"
+    },
+    {
+      "q": "charges for staying in hostel",
+      "id": "hostel-fees"
+    },
+    {
+      "q": "when do semester exams start",
+      "id": "exam-schedule"
+    },
+    {
+      "q": "where to download hall ticket",
+      "id": "exam-admit"
+    },
+    {
+      "q": "how do i see my semester marks",
+      "id": "exam-result"
+    },
+    {
+      "q": "what if my attendance is below 75",
+      "id": "exam-attendance"
+    },
+    {
+      "q": "apply for rechecking of paper",
+      "id": "exam-revaluation"
+    },
+    {
+      "q": "i failed a subject what now",
+      "id": "exam-backlog"
+    },
+    {
+      "q": "which companies hire from your college",
+      "id": "place-overview"
+    },
+    {
+      "q": "can i sit for placements with a backlog",
+      "id": "place-eligibility"
+    },
+    {
+      "q": "how to crack interviews",
+      "id": "place-prep"
+    },
+    {
+      "q": "summer training opportunities",
+      "id": "place-intern"
+    },
+    {
+      "q": "wifi password for campus",
+      "id": "campus-wifi"
+    },
+    {
+      "q": "is the mess food veg",
+      "id": "campus-canteen"
+    },
+    {
+      "q": "college bus timings",
+      "id": "campus-transport"
+    },
+    {
+      "q": "is there a basketball court",
+      "id": "campus-sports"
+    },
+    {
+      "q": "how do i join a technical society",
+      "id": "campus-clubs"
+    },
+    {
+      "q": "hospital near campus",
+      "id": "campus-medical"
+    },
+    {
+      "q": "need a new id card",
+      "id": "campus-id"
+    },
+    {
+      "q": "phone number of the helpdesk",
+      "id": "gen-contact"
+    },
+    {
+      "q": "hostl timings",
+      "id": "hostel-curfew"
+    },
+    {
+      "q": "libary timmings",
+      "id": "lib-hours"
+    },
+    {
+      "q": "wat is the admision proces",
+      "id": "adm-process"
+    },
+    {
+      "q": "scholarhip details",
+      "id": "adm-scholarship"
+    },
+    {
+      "q": "placment statistics",
+      "id": "place-overview"
+    }
+  ],
+  "out_of_scope": [
+    "what is the weather today",
+    "who won the cricket match",
+    "tell me a joke",
+    "how to cook pasta",
+    "what is machine learning",
+    "can i bring my pet dog",
+    "what is the capital of france",
+    "how tall is mount everest",
+    "recommend a good movie",
+    "how do i reset my instagram password"
+  ]
+}
